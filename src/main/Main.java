@@ -3,6 +3,7 @@ package main;
 import algorithm.sort.comparison_sort.commutative_sort.BubbleSort;
 import algorithm.sort.comparison_sort.commutative_sort.QuickSort;
 import algorithm.sort.comparison_sort.insert_sort.SimpleInsertSort;
+import algorithm.sort.comparison_sort.merge_sort.TwowayMegerSort;
 
 import static util.Utils.printArray;
 
@@ -20,7 +21,8 @@ public class Main {
         printArray(array);
 //        BubbleSort.bubbleSort(array);
 //        QuickSort.quickSort(array);
-        SimpleInsertSort.simpleInsertSort(array);
+//        SimpleInsertSort.simpleInsertSort(array);
+        TwowayMegerSort.mergeSort(array);
         printArray(array);
     }
 

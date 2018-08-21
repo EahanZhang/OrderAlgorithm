@@ -20,16 +20,20 @@ public class SimpleInsertSort {
 
     public static void simpleInsertSort(int[] array) {
         if (array == null || array.length <= 1) return ;
-        for (int i = 1; i < array.length; i++) {
-            int temp = array[i];
-            for (int j = i; j > 0; j--) {
-                if (array[j] > array[j - 1]) {
-                    array[j] = array[j - 1];
+        for (int i = 0; i < array.length - 1; i++) {
+            int temp = array[i + 1];
+            int j = i;
+            for (; j >= 0; j--) {
+                // 若当前元素大于temp，说明temp应该位于其前面，将当前元素后移
+                if (array[j] > temp) {
+                    array[j+1] = array[j];
                 } else {
-                    array[j] = temp;
+                    // 当当前元素小于temp时，说明temp的位置在当前元素的后面，跳出循环
                     break;
                 }
             }
+            // 将temp放在正确的位置上
+            array[j+1] = temp;
         }
     }
 }
