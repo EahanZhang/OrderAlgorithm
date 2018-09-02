@@ -17,6 +17,6 @@ package algorithm.sort.comparison_sort.selection_sort;
 public class SimpleSelectionSort {
 
     public static void selectionSort(int[] array) {
-
+        if (array == null || array.length <= 1) return ;
     }
 }
